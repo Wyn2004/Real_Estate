@@ -18,7 +18,7 @@
         - tạo file .sequelizerc, copy code mẫu trên web sequelize
 
 - Khởi tạo client: cd client
-
+    
 
 
 
