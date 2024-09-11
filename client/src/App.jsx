@@ -1,9 +1,17 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import path from './utils/path'
+import { Home, PublicLayout } from './pages/public'
 
+// thẻ Routes dùng để bao hết thẻ Route
 const App = () => {
   return (
-    <div className='text-3xl text-red-500'>
-      App
+    <div className=''>
+      <Routes>
+        <Route path={path.PUBLIC_LAYOUT} element={<PublicLayout />}>
+          <Route path={path.HOME} element={<Home />} />
+        </Route>
+      </Routes>
     </div>
   )
 }
