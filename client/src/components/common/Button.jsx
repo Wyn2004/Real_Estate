@@ -6,7 +6,7 @@ const Button = ({children, className, onclick, type = 'button'}) => {
     return (
         <button
             type={type}
-            onclick={onclick}
+            onClick={onclick}
             className={twMerge(
                 clsx('py-3 px-4 text-white bg-main-700 rounded-lg', className)
             )}

@@ -23,21 +23,6 @@ const navigations = [
     },
     {
         id: '5',
-        path: `/${path.GALLERY}`,
-        text:'GALLERY'
-    },
-    {
-        id: '6',
-        path: `/${path.BLOG}`,
-        text:'BLOG'
-    },
-    {
-        id: '7',
-        path: `/${path.CONTACT_US}`,
-        text:'CONTACT US'
-    },
-    {
-        id: '8',
         path: `/${path.SEARCH}`,
         text:'SEARCH'
     },

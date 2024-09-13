@@ -1,12 +1,18 @@
 import React from 'react'
 import icons from '../../utils/icon'
+import { twMerge } from 'tailwind-merge'
+import clsx from 'clsx'
+import withRouter from '~/hocs/withRouter'
 
 // z-index để nổi lên
-const Topheader = () => {
+const Topheader = ({location}) => {
     const { HiOutlineMailOpen, FiPhone, FaFacebookF, FaInstagram, FaBehance, IoLogoYoutube } = icons
     return (
-        <div className='w-full text-white h-[85px] bg-transparent fixed z-50 top-0 
-        px-[100px] py-[26px] flex justify-between items-center border-b border-main-200'>
+        <div className={twMerge(
+            clsx('w-full text-white h-[85px] bg-transparent fixed z-50 top-0 px-[100px] py-[26px] flex justify-between items-center border-b border-main-200',
+                location.pathname !=='/' && 'bg-main-700'
+            )
+        )}>
             <span className='flex items-center gap-2'>
                 <span>
                     <HiOutlineMailOpen className='text-lg'/>
@@ -40,4 +46,4 @@ const Topheader = () => {
     )
 }
 
-export default Topheader
+export default withRouter(Topheader)
