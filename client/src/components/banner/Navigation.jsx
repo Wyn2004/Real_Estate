@@ -1,6 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Button from '../common/Button'
+import navigations from '~/utils/constain'
+import clsx from 'clsx'
 
 const Navigation = () => {
     return (
@@ -8,7 +10,16 @@ const Navigation = () => {
             <Link to={'/'}>
                 <img src='/logo1.png' alt='Logo' className='w-[170px] object-contain'/>
             </Link>
-            <div>
+            <div className='text-main-50 flex items-center gap-6 text-md'>
+                {navigations.map((el) => (
+                    <NavLink
+                        key={el.id}
+                        to={el.path}
+                        className={({ isActive }) => clsx(isActive && 'font-bold text-lg')}
+                    >
+                        {el.text}
+                    </NavLink>
+                ))}
                 <Button className='bg-transparent border border-white'>
                     Add Listing
                 </Button>

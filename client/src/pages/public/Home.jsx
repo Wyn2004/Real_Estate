@@ -4,7 +4,10 @@ const home = () => {
     return (
         <div className='w-full bg-white'>
             <div className='h-fit w-full'>
-                <img src='/banner.png' alt='banner'/>
+                <img src='/banner.png' alt='banner' />
+                <div>
+                    
+                </div>
             </div>
             <div className='w-main mx-auto'>
                 content
