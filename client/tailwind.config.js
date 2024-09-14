@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        PT_Serif: ["PT Serif"]
+      },
       backgroundColor: {
         "main-50": "#EDEFF6",
         "main-100": "#DBDFEC",
@@ -36,5 +39,7 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }

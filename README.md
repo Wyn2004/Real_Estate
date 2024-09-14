@@ -21,8 +21,10 @@
     - Cài vite: npm create vite@latest
     - Cài tailWindCss:  npm install -D tailwindcss postcss autoprefixer
                         npx tailwindcss init -p
+                        npm install -D @tailwindcss/forms
+
     - Config absolute path: file jsconfig.json và file vite.config.js
-    - Cài vài thư viện ngon ngon: npm i react-router-dom moment zustand axios sweetalert2 react-toastify react-icons clsx tailwind-merge
+    - Cài vài thư viện ngon ngon: npm i react-router-dom moment zustand axios sweetalert2 react-toastify react-icons clsx tailwind-merge react-hook-form
         - Ý nghĩa thư viện: 
             react-router-dom: Thư viện để quản lý routing (điều hướng) trong ứng dụng React, giúp chuyển đổi giữa các trang mà không cần tải lại toàn bộ trang.
 
