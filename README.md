@@ -8,6 +8,9 @@
             dotenv: đọc file môi trường
             cors: liên lạc giữa client và server
         - npm i -D nodemon
+        - npm i joi: thư viện tạo ràng buộc validate, tạo file joi ở middleware server
+        - npm install --save express-async-handler : dùng để bắt lỗi mà ko cần try-catch
+
 
     - cài sequelize 
         - npm install --save sequelize

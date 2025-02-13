@@ -1,0 +1,10 @@
+
+/// Register
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "phone": "01234",
+    "password": "password123",
+    "name": "thang"
+}

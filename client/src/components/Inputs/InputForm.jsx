@@ -10,18 +10,26 @@ const InputForm = ({
     inputClassName,
     register,
     validate,
-    errors,
-    containerClassName
+    errors = {},
+    containerClassName,
+    placeholder
 }) => {
     return (
-        <div className={twMerge(clsx('flex flex-col gap-4 w-full'))}>
-            {label && <label htmlFor={id}>{label}</label>}
+        <div className={twMerge(clsx('flex flex-col gap-2 w-full'))}>
+            {label && <label className='font-semibold' htmlFor={id}>{label}</label>}
             <input
                 type={type}
                 id={id}
-                className={twMerge(clsx(style, inputClassName))}
+                className={twMerge(clsx( 'placeholder:text-sm', inputClassName))}
                 {...register(id, validate)}
+                placeholder={placeholder}
             />
+            {
+                errors[id] &&
+                <small className='text-xs text-red-500'>
+                    {errors[id].message}
+                </small>
+            }
         </div>
     )
 }

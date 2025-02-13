@@ -2,6 +2,7 @@
 const express = require('express')
 const cors = require('cors')
 const dbConnect = require('./config/dbConnect')
+const initRoutes = require('./routes')
 
 // lấy biến từ file môi trường env
 require('dotenv').config()
@@ -18,6 +19,9 @@ app.use(express.json())
 //tạo middleware đọc data gửi lên vd như method post gửi lên body, param...
 //  hàm này cho phép đọc và phân tích data gửi lên
 app.use(express.urlencoded({ extended: true })) 
+
+// tạo init route cho server
+initRoutes(app)
 
 // Connect db
 dbConnect()
